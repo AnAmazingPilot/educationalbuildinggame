@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Educational Game Launcher</title>
+</head>
+<body>
+  <h1>Game Launcher</h1>
+  <p>Loading...</p>
+  <iframe id="propergameFrame" src="game.html" width="800" height="600"></iframe> 
+
+  <button onclick="toggleFullscreen()">Fullscreen</button>
+
+  <script>
+    function toggleFullscreen() {
+      const elem = document.getElementById('eaglercraftFrame');
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
